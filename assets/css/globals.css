@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Gotham Book";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Book"), url("../fonts/GothamBook.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham Book Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Book Italic"),
+      url("../fonts/GothamBookItalic.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham Light";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Light"), url("../fonts/GothamLight.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham Light Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Light Italic"),
+      url("../fonts/GothamLightItalic.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Medium"),
+      url("../fonts/GothamMedium.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Medium"),
+      url("../fonts/GothamMedium_1.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Medium"),
+      url("../fonts/GothamMediumItalic.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Bold"), url("../fonts/GothamBold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Bold"), url("../fonts/GothamBold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham Bold Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Bold Italic"),
+      url("../fonts/GothamBoldItalic.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Jost Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Jost Regular"),
+      url("../fonts/JostVariableFont_wght.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Jost Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Jost Italic"),
+      url("../fonts/JostItalicVariableFont_wght.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham Black Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Black Regular"),
+      url("../fonts/GothamBlack.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham Light Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Light Regular"),
+      url("../fonts/GothamLight.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham Thin Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Thin Regular"),
+      url("../fonts/GothamThin.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham XLight Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham XLight Regular"),
+      url("../fonts/GothamXLight.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Carnero Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Carnero Regular"),
+      url("../fonts/CarneroBold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham Book Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Book Italic"),
+      url("../fonts/GothamBookItalic.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham Thin Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Thin Italic"),
+      url("../fonts/GothamThinItalic.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham Ultra Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham Ultra Italic"),
+      url("../fonts/GothamUltraItalic.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gotham XLight Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Gotham XLight Italic"),
+      url("../fonts/GothamXLightItalic.woff") format("woff");
+  }
+}
+
+@layer utilities {
+  .vertical {
+    writing-mode: vertical-rl;
+  }
+
+  .embla {
+    overflow: hidden;
+    position: relative;
+  }
+  .embla__container {
+    display: flex;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .embla__slide {
+    position: relative;
+    flex: 0 0 100%;
+  }
+  .embla__slide > img {
+    height: 100vh;
+    width: 100%;
+  }
+  .embla__viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .embla__viewport.is-draggable {
+    cursor: move;
+    cursor: grab;
+  }
+
+  .embla__viewport.is-dragging {
+    cursor: grabbing;
+  }
+
+  .embla__button {
+    outline: 0;
+    cursor: pointer;
+    background-color: transparent;
+    touch-action: manipulation;
+    position: absolute;
+    z-index: 70;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    fill: rgba(157, 29, 89, 1);
+    padding: 0;
+  }
+
+  .embla__button:disabled {
+    cursor: default;
+    opacity: 0.3;
+  }
+
+  .embla__button__svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .embla__button--prev {
+    left: 27px;
+  }
+
+  .embla__button--next {
+    right: 27px;
+  }
+
+  .stylistic-quote-mark {
+    font-size: 5rem;
+    right: 100%;
+    @apply mr-2 hidden font-quoto absolute top-0 leading-none;
+  }
+
+  @screen sm {
+    .stylistic-quote-mark {
+      @apply block;
+    }
+  }
+}
+
+@layer components {
+  .timeline-img {
+    @apply h-24 w-24 object-cover rounded-full shadow-md border-4 border-white xs:absolute md:mx-auto md:left-0 md:right-0;
+  }
+  .timeline-container {
+    @apply relative pt-2 xs:pl-28 xs:pt-0 md:w-1/2 md:ml-auto md:pl-16;
+  }
+  .timeline-pointer {
+    @apply absolute border-[1px] z-[-1] inset-0 h-4 w-4 transform rotate-45 bg-gray-100 xs:top-11 xs:left-26 md:left-14;
+  }
+}
